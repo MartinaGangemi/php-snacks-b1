@@ -19,7 +19,7 @@ var_dump($name, $mail, $age, strlen($name));
 </head>
 <body>
     <?php if (strlen($name) > 3 && str_contains($mail, ".") && str_contains($mail, "@") && is_numeric($age)) : ?>
-        <h1>davi validi</h1>
+        <h1>dati validi</h1>
     <?php  else: ?>
         <h1>devi inserire i dati corretti!</h1>
     <?php endif; ?>
