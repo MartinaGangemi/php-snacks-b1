@@ -34,6 +34,24 @@
     <title>Document</title>
 </head>
 <body>
-    <p></p>
+
+ <?php for ($i=0; $i < count($array); $i++) {
+        echo $array[$i]["casa"] ?> -
+        <?php echo $array[$i]["ospite"]; ?> |
+        <?php echo $array[$i]["puntiCasa"]; ?> -
+        <?php echo $array[$i]["puntiOspite"]; ?> <br>
+        <?php } ?>
+
+
+
+<!-- <h2>Seconda versione</h2>
+<?php
+    for ($i=0; $i < count($array); $i++) {
+        echo $array[$i]["casa"] ." " ."-" . " ";
+         echo $array[$i]["ospite"] ." " ."|" . " "; 
+         echo $array[$i]["puntiCasa"] ." " ."-" . " ";
+         echo $array[$i]["puntiOspite"] . "<br>"; 
+         }
+ ?> -->
 </body>
 </html>
