@@ -1,49 +1,19 @@
-<!-- ## Snack 7
-Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
+<!-- ## Snack 4
+Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
 
 <?php 
-$classe= [
-    [
-        "nome" => "Christian",
-        "cognome" =>"Laus",
-        "voti"=>[ 5, 6 , 4, 8 , 7]
-    ],
-    [
-        "nome" => "Davide",
-        "cognome" =>"De Castro",
-        "voti"=>[ 6, 6 , 9, 8 , 7]
-    ],
-    [
-        "nome" => "Giuseppe",
-        "cognome" =>"Fornaro",
-        "voti"=>[ 6, 7 , 8, 8 , 7]
-    ]
-    ];
+$randomNumb = [];
+
+
+for($i=0; count($randomNumb) <15 ; $i++){
+ $number = rand(1, 50);
+ if(!in_array($number, $randomNumb)){
+    array_push($randomNumb, $number);
+  }
+}
+
+var_dump($randomNumb);
+
+
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php 
-        foreach ($classe as $alunno) {
-            // somma dei voti
-            $sum =  array_sum($alunno["voti"]);
-            // media dei voti
-            $average = $sum / count($alunno["voti"]);
-            echo "<strong>Nome e Cognome:</strong>". " ".$alunno["nome"]." ".$alunno["cognome"]." ". "<strong>Media:</strong>". " " .$average. "<br>";
-        }  
-
-        
-        
-        
-    ?>  
-    
-</body>
-</html>
